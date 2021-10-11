@@ -22,14 +22,16 @@ import {
   TableCaption
   } from "@chakra-ui/react"
 
-// import { Container } from './Container'
 
 export const CustomerSection = () => {
   return(
     <Container
-      maxWidth={'full'}
-      h={'full'}
-      p={5}
+      maxWidth="full"
+      h={{base:"100vh"}}
+      minH="max"
+      p={{base: 2, sm: 10, md:10}}
+      px={{base: 5, sm: 20}}
+      pt={{base: 10, sm: 0 }}
       justify="center"
       direction="column"
       bg="beige"
@@ -37,7 +39,7 @@ export const CustomerSection = () => {
       <Heading p={5}>Pricelist</Heading>
 
       <Box mt={20}>
-        <Table size="lg" variant="simple">
+        <Table size={{ base: "xsm", md: "lg", lg: "lg" }} variant="simple">
           <Thead>
             <Tr>
               <Th>To convert</Th>

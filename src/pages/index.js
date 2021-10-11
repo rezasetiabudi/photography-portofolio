@@ -20,14 +20,9 @@ import Navbar from '../components/Navbar'
 
 const Index = () => (
   <>
-    {/* <Navbar /> */}
     <Hero title={Copywriting.title} desc={Copywriting.desc} />
-    <Container h='100vh' w={'auto'}>
-      <AboutSection />
-    </Container>
-    <Container h='100vh' w={'auto'}>
-      <CustomerSection />
-    </Container>
+    <AboutSection />
+    <CustomerSection />
   </>
 )
 
