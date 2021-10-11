@@ -40,9 +40,15 @@ export const AboutSection = () => {
           w={{base:"100%", md:"40%"}}
           alignSelf="center"
         />
-        <Text mt={4} textAlign="justify" w={{base:"100%", md:"40%"}}>
-          {Copywriting.profile}
-        </Text>
+        <Flex 
+          flexDirection="column"
+          w={{base:"100%", md:"40%"}}
+        >
+          <Text mt={4} textAlign="justify">
+            {Copywriting.profile}
+          </Text>
+          <CTA />
+        </Flex>
       </Flex>
           
     </Flex>
