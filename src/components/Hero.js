@@ -18,7 +18,7 @@ const Hero = ({ title, desc }) => {
       <Flex
         w="full"
         h="100vh"
-        backgroundImage="/assets/image/wsuff_hero.jpg"
+        backgroundImage={{base: "assets/image/wsuff_hero_mobile.jpg" ,md:"/assets/image/wsuff_hero.jpg"}}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}>
         <VStack
@@ -29,7 +29,7 @@ const Hero = ({ title, desc }) => {
           <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
             <Heading> 
               <Text
-                color={'white'}
+                color="#f7941e"
                 fontWeight={700}
                 lineHeight={1.2}
                 fontSize={size=='laptop' ? '8xl' : '4xl'}>
