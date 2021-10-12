@@ -47,7 +47,7 @@ export default ({ post, blocks }) => {
       p={{base: 2, sm: 10, md:10, lg: 20}}
       py={{base: 2, sm: 5}}
       flexDir="column"
-      bg="red"
+      bg="ivory"
     >
       <Center flexDir="column" w="full" bg="ivory">  
         <Heading 
