@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   const posts = await getAllPosts();
   return {
     paths: posts.map((row) => `/${row.slug}`),
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -38,12 +38,9 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export default ({ post, blocks }) => {
-  console.log("slug page, post:",post)
-  console.log("slug page, blocks:",blocks)
   return(
     <Flex
       w='full'
-      // h={{base:"160vh", xsm: "130vh", sm:"120vh", md: "110vh", lg: "100vh"}}
       p={{base: 2, sm: 10, md:10, lg: 20}}
       py={{base: 2, sm: 5}}
       flexDir="column"

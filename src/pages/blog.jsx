@@ -19,10 +19,9 @@ export async function getStaticProps() {
 }
 
 function BlogPage({ posts }) {
-	console.log("json from notion postlist",posts)
   return (
     <div>
-      {posts.map((post) => (
+      {posts && posts.map((post) => (
         <Link href="/[slug]" as={`/${post.slug}`}>
           <div key={post}>{post.title}</div>
         </Link>
