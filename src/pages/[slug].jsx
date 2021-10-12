@@ -54,7 +54,7 @@ export default ({ post, blocks }) => {
           size="xl" 
           py={{base: 2,sm: 2}}
         >
-          {post.title}
+          {post && post.title}
         </Heading>
         <NotionRenderer blockMap={blocks} />
       </Center>
