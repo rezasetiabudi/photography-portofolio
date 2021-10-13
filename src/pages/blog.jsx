@@ -41,16 +41,16 @@ function BlogPage({ posts }) {
     <Flex
       w='full'
       // h={{base:"fit", xsm: "130vh", sm:"120vh", md: "110vh", lg: "100vh"}}
-      h={{base:"fit-content", xsm: "fit-content", sm:"fit-content", md: "fit-content", lg: "100vh"}}
+      h={{base:"fit-content", xsm: "fit-content", sm:"fit-content", md: "fit-content", lg: "fit-content"}}
       py={{base: 2, sm: 10, md:10, lg: 5}}
       px={{base: 5, sm: 20}}
-      flexDir={{base:"column", xsmtsm:"row"}}
-      wrap="wrap"
+      flexDir="column"
       bg="#ebebeb"
     >
+      <Heading my="4" ml="2">Our Article and Portofolio</Heading>
       {isLoading && 
         <Flex
-          h="full"
+          h="80vh"
           w="full"
           flexDir="column"
           justifyContent="center"
@@ -65,59 +65,76 @@ function BlogPage({ posts }) {
           />
         </Flex>
       }
-      {posts && posts.map((post) => {
-        console.log("posts.map : ", post)
-        return (
-            <Link href="/[slug]" as={`/${post.slug}`} key={post.id}>
-              <Flex
-                h={{base: "35vh", sm: "35vh", md: "40vh", lg:"50vh", xl:"40vh"}}
-                w={{base: "90%", xsm: "80%", xsmtsm: "40%", sm: "40%", md: "30%",lg: "20%"}}
-                mx={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "2%"}}
-                my={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
-                bg="#f7941e"
-                overflow="auto"
-                onClick={()=>setIsLoading(true)}
-                display={isLoading ? 'none' : 'initial'}
-              >
+
+      <Flex w="full" h="full" wrap="wrap">
+        {posts && posts.map((post) => {
+          console.log("posts.map : ", post)
+          const [ cover ] = post.cover || [{url:"https://images.unsplash.com/photo-1600267175161-cfaa711b4a81"}]
+
+          return (
+              <Link href="/[slug]" as={`/${post.slug}`} key={post.id}>
                 <Flex
-                  h="95%"
-                  p="4"
-                  flexDir="column"
-                  justifyContent="space-between"
+                  h={{base: "35vh", sm: "35vh", md: "40vh", lg:"35vh", xl:"35vh"}}
+                  w={{base: "90%", xsm: "80%", xsmtsm: "40%", sm: "40%", md: "30%",lg: "30%"}}
+                  mx={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
+                  my={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
+                  backgroundImage={`url(${cover.url})`}
+                  backgroundSize="cover"
+                  backgroundPosition={'center center'}
+                  overflow="auto"
+                  onClick={()=>setIsLoading(true)}
+                  display={isLoading ? 'none' : 'initial'}
                 >
-                  <Text 
-                    fontSize={{base:"xl",md:"3xl",lg:"3xl"}}
-                    fontWeight="bold"
-                  >
-                    {post.title}
-                  </Text>
-                  <Flex>
-                    <Avatar 
-                      src={post.author[0].profilePhoto} 
-                      alignSelf="center" 
-                      size="sm"
-                    />
-                    <Box>
-                      <Text fontWeight="bold" ml="1" fontSize="sm">
-                        {post.author[0].fullName}
-                      </Text>
-                      {post && post.category.map(tags => (
-                        <Badge 
+                  <Flex
+                    h="95%"
+                    p="4"
+                    flexDir="column"
+                    justifyContent="space-between"
+                    bg="blackAlpha.500"
+                    shadow="dark-lg"
+                    >
+                    <Text 
+                      fontSize={{base:"md", xsmtsm: "sm",md:"lg",lg:"lg",xl:"xl"}}
+                      fontWeight="bold"
+                      color="white"
+                    >
+                      {post.title}
+                    </Text>
+                    <Flex
+                      // display={{base: "none",lg: "inherit"}}
+                    >
+                      <Avatar 
+                        src={post.author[0].profilePhoto} 
+                        alignSelf="center" 
+                        size="sm"
+                      />
+                      <Box>
+                        <Text 
+                          fontWeight="bold" 
                           ml="1" 
-                          variant="solid" 
-                          colorScheme="whiteAlpha"
-                          fontSize={{base:"8px",lg: "8px"}}
+                          fontSize={{base:"12px", xsmtsm: "12px",lg: "md"}}
+                          color="white"
                         >
-                          {tags}
-                        </Badge>
-                      ))}
-                      {/* <Text fontSize="sm" color="red">{post.slug}</Text> */}
-                    </Box>
+                          {post.author[0].fullName}
+                        </Text>
+                        {post && post.category.map(tags => (
+                          <Badge 
+                            ml="1" 
+                            variant="solid" 
+                            colorScheme="whiteAlpha"
+                            fontSize={{base:"8px", xsmtsm: "6px",lg: "8px"}}
+                          >
+                            {tags}
+                          </Badge>
+                        ))}
+                        {/* <Text fontSize="sm" color="red">{post.slug}</Text> */}
+                      </Box>
+                    </Flex>
                   </Flex>
                 </Flex>
-              </Flex>
-            </Link>
-      )})}
+              </Link>
+        )})}
+      </Flex>
     </Flex>
   );
 }
