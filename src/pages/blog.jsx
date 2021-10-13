@@ -62,7 +62,6 @@ function BlogPage({ posts }) {
             color="#F7941e"
             size="xl"
             alignSelf="center"
-            label="Doing some witchcraft"
           />
         </Flex>
       }
@@ -76,6 +75,7 @@ function BlogPage({ posts }) {
                 mx={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "2%"}}
                 my={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
                 bg="#f7941e"
+                overflow="auto"
                 onClick={()=>setIsLoading(true)}
                 display={isLoading ? 'none' : 'initial'}
               >

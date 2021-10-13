@@ -42,20 +42,33 @@ export default ({ post, blocks }) => {
   return(
     <Flex
       w='full'
-      p={{base: 2, sm: 10, md:10, lg: 20}}
-      py={{base: 2, sm: 5}}
+      minH="100vh"
+      wrap="wrap"
+      justifyContent="space-between"
       flexDir="column"
-      bg="ivory"
+      bg="#F89E32"
     >
-      <Center flexDir="column" w="full" bg="ivory">  
+      {/* <Center flexDir="column" w="full" bg="ivory">   */}
         <Heading 
-          size="xl" 
-          py={{base: 2,sm: 2,md: 12}}
+          fontSize={{base: "md", xsmtsm: "xl", sm: "2xl", md:"3xl"}} 
+          color="ivory"
+          alignSelf="center"
+          px={{base: "10%", }}
+          py={{base: "10%", sm: "4%", lg: "4%"}}
         >
           {post && post.title}
         </Heading>
-        <NotionRenderer blockMap={blocks} />
-      </Center>
+        <Flex
+          w="full"
+          px={{base: "10%", md:"10%", lg: "15%", xl: "20%"}}
+          pt={{base: "8%", xsmtsm: "7%", sm: "7%", md: "7%", lg:"10%", xl: "5%"}}
+          bg="ivory"
+          wrap="wrap"
+          overflowWrap="break-word"
+        >
+          <NotionRenderer blockMap={blocks} />
+        </Flex>
+      {/* </Center> */}
     </Flex>
   )
 }

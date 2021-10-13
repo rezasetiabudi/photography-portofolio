@@ -1,6 +1,7 @@
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
+import '../styles.css'
 
 import theme from '../theme'
 
