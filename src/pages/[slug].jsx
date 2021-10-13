@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   const posts = await getAllPosts();
   return {
     paths: posts.map((row) => `/${row.slug}`),
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
@@ -34,6 +34,7 @@ export async function getStaticProps({ params: { slug } }) {
      blocks,
      post,
     },
+    revalidate: 10,
   };
 }
 
@@ -49,7 +50,7 @@ export default ({ post, blocks }) => {
       <Center flexDir="column" w="full" bg="ivory">  
         <Heading 
           size="xl" 
-          py={{base: 2,sm: 2}}
+          py={{base: 2,sm: 2,md: 12}}
         >
           {post && post.title}
         </Heading>
