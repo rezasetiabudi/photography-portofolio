@@ -40,7 +40,7 @@ function BlogPage({ posts }) {
   return (
     <Flex
       w='full'
-      // h={{base:"fit", xsm: "130vh", sm:"120vh", md: "110vh", lg: "100vh"}}
+      minH="100vh"
       h={{base:"fit-content", xsm: "fit-content", sm:"fit-content", md: "fit-content", lg: "fit-content"}}
       py={{base: 2, sm: 10, md:10, lg: 5}}
       px={{base: 5, sm: 20}}
