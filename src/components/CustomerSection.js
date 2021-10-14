@@ -1,14 +1,8 @@
 import { 
-    Grid,
-    GridItem,
     Flex,
-    Spacer,
-    Wrap,
-    WrapItem,
     Box,
     Heading,
     Text,
-    Container
   } from '@chakra-ui/layout'
 
 import {
@@ -25,55 +19,22 @@ import {
 
 export const CustomerSection = () => {
   return(
-    <Container
+    <Flex
       maxWidth="full"
-      h={{base:"100vh"}}
-      minH="max"
-      p={{base: 2, sm: 10, md:10}}
-      px={{base: 5, sm: 20}}
-      pt={{base: 10, sm: 0 }}
-      justify="center"
+      h={{base:"fit-content",lg:"100vh"}}
+      px={{base: 5, sm: 10, lg: 12, xl: 12}}
+      py={{base: 10}}
+      justify={{base:"center"}}
       direction="column"
       bg="beige"
     >
-      <Heading p={5}>Pricelist</Heading>
+      <Heading 
+        pb={{base: 1, lg: 12}}
+        fontSize={{base: "xl", md:"2xl", lg: "3xl", xl: "4xl"}}
+      >
+        pricelist soon... 
+      </Heading>
 
-      <Box mt={20}>
-        <Table size={{ base: "xsm", md: "lg", lg: "lg" }} variant="simple">
-          <Thead>
-            <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>inches</Td>
-              <Td>millimetres (mm)</Td>
-              <Td isNumeric>25.4</Td>
-            </Tr>
-            <Tr>
-              <Td>feet</Td>
-              <Td>centimetres (cm)</Td>
-              <Td isNumeric>30.48</Td>
-            </Tr>
-            <Tr>
-              <Td>yards</Td>
-              <Td>metres (m)</Td>
-              <Td isNumeric>0.91444</Td>
-            </Tr>
-          </Tbody>
-          <Tfoot>
-            <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
-            </Tr>
-          </Tfoot>
-          <TableCaption>Contact for best price and more offer</TableCaption>  
-        </Table>
-      </Box>
-    </Container>
+    </Flex>
   )   
 }

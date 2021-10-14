@@ -22,7 +22,7 @@ export const AboutSection = () => {
       flexDir="column"
       bg="ivory"
     >
-      <Heading 
+      {/* <Heading 
         size="xl" 
         p={{base: 5,sm: 10}}
       >
@@ -49,7 +49,7 @@ export const AboutSection = () => {
           </Text>
           <CTA />
         </Flex>
-      </Flex>
+      </Flex> */}
           
     </Flex>
   )
