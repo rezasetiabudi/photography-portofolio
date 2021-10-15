@@ -69,7 +69,7 @@ function BlogPage({ posts }) {
       <Flex w="full" h="full" wrap="wrap">
         {posts && posts.map((post) => {
           console.log("posts.map : ", post)
-          const [ cover ] = post.cover || [{url:"https://images.unsplash.com/photo-1600267175161-cfaa711b4a81"}]
+          const [ cover ] = post.cover || [{url:null}]
 
           return (
               <Link href="/[slug]" as={`/${post.slug}`} key={post.id}>
@@ -78,7 +78,7 @@ function BlogPage({ posts }) {
                   w={{base: "90%", xsm: "80%", xsmtsm: "40%", sm: "40%", md: "30%",lg: "30%"}}
                   mx={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
                   my={{base: "5%", xsm: "10%", xsmtsm: "5%", sm: "4%", md: "1%", lg: "1%"}}
-                  backgroundImage={`url(${cover.url})`}
+                  backgroundImage={cover.url ? `url(${cover.url})` : "/assets/image/wsuff_logo.png"}
                   backgroundSize="cover"
                   backgroundPosition={'center center'}
                   overflow="auto"
@@ -100,9 +100,7 @@ function BlogPage({ posts }) {
                     >
                       {post.title}
                     </Text>
-                    <Flex
-                      // display={{base: "none",lg: "inherit"}}
-                    >
+                    <Flex>
                       <Avatar 
                         src={post.author[0].profilePhoto} 
                         alignSelf="center" 

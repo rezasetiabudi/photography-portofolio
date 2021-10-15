@@ -9,9 +9,8 @@ import {
 import { Img } from "@chakra-ui/react"
 
 import { CTA } from './CTA'
-import { Copywriting } from '../constants/Copywriting'
 
-export const AboutSection = () => {
+export const AboutSection = ({companyProfile}) => {
   
   return(
     <Flex
@@ -22,7 +21,7 @@ export const AboutSection = () => {
       flexDir="column"
       bg="ivory"
     >
-      {/* <Heading 
+      <Heading 
         size="xl" 
         p={{base: 5,sm: 10}}
       >
@@ -45,11 +44,11 @@ export const AboutSection = () => {
           w={{base:"100%", md:"40%"}}
         >
           <Text mt={4} textAlign="justify">
-            {Copywriting.profile}
+            {companyProfile}
           </Text>
           <CTA />
         </Flex>
-      </Flex> */}
+      </Flex>
           
     </Flex>
   )
