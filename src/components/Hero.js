@@ -34,7 +34,7 @@ const Hero = ({ title, desc }) => {
                 color="#f7941e"
                 fontWeight={700}
                 lineHeight={1.2}
-                fontSize={{base: "4xl", xsmtsm: "6xl", lg: "6xl", xl: "8xl"}}>
+                fontSize={{base: "4xl", xsmtsm: "6xl", lg: "6xl", xl: "6xl"}}>
                 {title}
               </Text>
             </Heading>
