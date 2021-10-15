@@ -14,16 +14,17 @@ export const AboutSection = ({companyProfile}) => {
   
   return(
     <Flex
-      w='full'
-      h={{base:"160vh", xsm: "130vh", sm:"120vh", md: "110vh", lg: "100vh"}}
-      p={{base: 2, sm: 10, md:10, lg: 20}}
-      px={{base: 5, sm: 20}}
-      flexDir="column"
+      maxWidth="full"
+      h={{base:"fit-content",lg:"100vh"}}
+      px={{base: 8, sm: 10, lg: 12, xl: 12}}
+      py={{base: 10}}
+      justify={{base:"center"}}
+      direction="column"
       bg="ivory"
     >
       <Heading 
-        size="xl" 
-        p={{base: 5,sm: 10}}
+        pb={{base: 1, lg: 12}}
+        fontSize={{base: "2xl", md:"2xl", lg: "3xl", xl: "4xl"}}
       >
         About Us
       </Heading>
@@ -35,9 +36,9 @@ export const AboutSection = ({companyProfile}) => {
           src="/assets/image/wsuff.png"
           objectFit={{base:"cover", md:"initial"}}
           h={{base: "35vh", md:"35vh"}}
-          pt={{base: 10, md: 0}}
+          pt={{base: 5}}
           w={{base:"100%", md:"40%"}}
-          alignSelf="center"
+          alignSelf="start"
         />
         <Flex 
           flexDirection="column"
@@ -46,7 +47,12 @@ export const AboutSection = ({companyProfile}) => {
           <Text mt={4} textAlign="justify">
             {companyProfile}
           </Text>
-          <CTA />
+          <Flex
+            mt={{base:6}}
+            flexDir="row-reverse"
+          >
+            <CTA />
+          </Flex>
         </Flex>
       </Flex>
           

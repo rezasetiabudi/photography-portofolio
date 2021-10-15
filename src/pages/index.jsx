@@ -25,7 +25,7 @@ const Index = (props) => {
   return (
     <>
       <Hero title={data.title} desc={data.desc} />
-      <AboutSection companyProfile={data.profile}/>
+      <AboutSection companyProfile={data.profile} />
       <CustomerSection />
     </>
   )
