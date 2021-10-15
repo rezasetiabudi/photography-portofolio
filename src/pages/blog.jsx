@@ -13,12 +13,11 @@ import {
   Badge,
   Avatar,
   Spinner,
-  // Link as CLink,
 } from '@chakra-ui/react'
 
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const NOTION_BLOG_ID = 'd0f805342b8f40369cfad72708b1319b'
+const NOTION_BLOG_ID = 'fd42bb34317a4e96870562b87491274b'
 
 export const getAllPosts = async () => {
 	return await fetch(

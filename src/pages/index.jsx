@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import { AboutSection } from '../components/AboutSection'
 import { CustomerSection } from '../components/CustomerSection'
 
-const NOTION_BLOG_ID = '49fb82b390cf4451b377110dcc80d6ff'
+const NOTION_BLOG_ID = '45599b13194944f386da9cedfb6f197c'
 
 export const getCopyWritingData = async () => {
 	return await fetch(
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 
   return {
     props: {datas},
-    revalidate: 1800,
+    revalidate: 10,
   };
 }
 
