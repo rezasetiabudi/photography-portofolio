@@ -12,8 +12,11 @@ import {
 import {
   Badge,
   Avatar,
-  Spinner
+  Spinner,
+  // Link as CLink,
 } from '@chakra-ui/react'
+
+import { ChevronLeftIcon } from '@chakra-ui/icons';
 
 const NOTION_BLOG_ID = 'd0f805342b8f40369cfad72708b1319b'
 
@@ -47,7 +50,14 @@ function BlogPage({ posts }) {
       flexDir="column"
       bg="#ebebeb"
     >
-      <Heading my="4" ml="2">Our Article and Portofolio</Heading>
+      <Flex>
+        <Link href="/">
+          <Heading my="3" ml="2" bg="#f9741e">  
+            <ChevronLeftIcon/>
+          </Heading>
+        </Link>
+        <Heading my="4" ml="4">Our Article and Portofolio</Heading>
+      </Flex>
       {isLoading && 
         <Flex
           h="80vh"
