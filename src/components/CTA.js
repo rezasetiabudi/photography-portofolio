@@ -17,7 +17,7 @@ export const CTA = () => {
           Email
         </Button>
       </Link>
-      <Link href="https://wa.me/6281214269123?text=Halo%20Wsuff%20Studio">
+      <Link href="https://wa.me/6281214269124?text=Halo%20Wsuff%20Studio">
         <Button rightIcon={<ChatIcon />} colorScheme="whatsapp" variant="solid">
           Whatsapp
         </Button>
