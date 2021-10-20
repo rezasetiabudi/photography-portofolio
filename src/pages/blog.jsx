@@ -38,6 +38,7 @@ export async function getStaticProps() {
 
 function BlogPage({ posts }) {
   const [isLoading, setIsLoading] = useState(false);
+  console.log("data blog", posts)
 
   return (
     <Flex

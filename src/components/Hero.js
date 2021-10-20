@@ -17,7 +17,7 @@ const Hero = ({ title, desc }) => {
     <>
       <Flex
         w="full"
-        h={{base: "100vh", xsmtsm:"100vh", lg:"100vh"}}
+        h={{base: "fit-content", md:"auto"}}
         backgroundImage={{base: "assets/image/wsuff_hero_mobile.jpg" ,md:"/assets/image/wsuff_hero.jpg"}}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}
@@ -25,7 +25,7 @@ const Hero = ({ title, desc }) => {
         <VStack
           w={'full'}
           h={'full'}
-          px={{base: 8}}
+          p={{base: 8}}
           justify={'center'}
           bgGradient={'linear(to-r, blackAlpha.600, blackAlpha.300)'}>
           <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
@@ -46,22 +46,6 @@ const Hero = ({ title, desc }) => {
               fontSize={{base: "2xl", xsmtsm: "3xl", sm: "3xl", lg: "3xl", xl: "4xl"}}>
               {desc}
             </Text>
-            <Stack direction={'row'}>
-              <Link href='/blog'>
-
-                <Button
-                  p={6}
-                  bg={'blackAlpha.600'}
-                  rounded={'full'}
-                  color={'whiteAlpha.900'}
-                  _hover={{ bg: 'blackAlpha.900' }}
-                  rightIcon={<ChevronRightIcon />} 
-                  fontSize={{base: "xl", xsmtsm: "xl", sm: "2xl", lg: "3xl", xl: "3xl"}}
-                  >  
-                  Our Portofolio
-                </Button>
-              </Link>
-            </Stack>
           </Stack>
         </VStack>
       </Flex>
