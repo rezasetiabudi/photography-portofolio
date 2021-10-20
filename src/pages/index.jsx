@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Hero from '../components/Hero'
 import { AboutSection } from '../components/AboutSection'
+import { CTA } from '../components/CTA'
 
 import { 
   Flex,
@@ -59,6 +60,9 @@ const Index = (props) => {
       // h={{base:"100vh"}}
       w="full"
     >
+      <Box pos="fixed" w="100%" zIndex={2}>
+        <CTA />
+      </Box>
       <Flex w={{base:"100%", md:"35%"}}>
         <Hero title={data.title} desc={data.desc} />
       </Flex>
@@ -130,20 +134,7 @@ const Index = (props) => {
                         {post.title}
                       </Text>
                       <Flex>
-                        <Avatar 
-                          src={post.author[0].profilePhoto} 
-                          alignSelf="center" 
-                          size="sm"
-                        />
                         <Box>
-                          <Text 
-                            fontWeight="bold" 
-                            ml="1" 
-                            fontSize={{base:"12px", xsmtsm: "12px",lg: "md"}}
-                            color="white"
-                          >
-                            {post.author[0].fullName}
-                          </Text>
                           {post && post.category.map(tags => (
                             <Badge 
                               ml="1" 

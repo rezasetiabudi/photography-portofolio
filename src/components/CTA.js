@@ -20,7 +20,7 @@ export const CTA = () => {
       w='100%'
       flexWrap='wrap'
     >
-      <Flex py='2' pr={{base:0,xsmtsm:2}} w={{base:"100%", xsmtsm:"50%"}}>
+      {/* <Flex py='2' pr={{base:0,xsmtsm:2}} w={{base:"100%", xsmtsm:"50%"}}>
         <Link href="mailto:hellowsuff@gmail.com">
           <Button 
             rightIcon={<EmailIcon />} 
@@ -31,20 +31,22 @@ export const CTA = () => {
             Email
           </Button>
         </Link>
-      </Flex>
-      <Flex py='2' pl={{base:0,xsmtsm:2}} w={{base:"100%", xsmtsm:"50%"}}>
+      </Flex> */}
+      <Flex py='2' pl={{base:0,xsmtsm:2}} w={{base:"100%", xsmtsm:"50%"}} onClick={e=>window.fbq('track', 'Lead')}>
         <Link href="https://wa.me/6281214269124?text=Halo%20Wsuff%20Studio">
           <Button 
             rightIcon={<ChatIcon />} 
             colorScheme="whatsapp" 
             variant="solid"
             width="full"
+            
+            // onClick={{e => window.fbq('track', 'Lead')}}
           >
             Whatsapp
           </Button>
         </Link>
       </Flex>
-      <Flex py='2' w="full">
+      {/* <Flex py='2' w="full">
         <Link href='/blog'>
           <Button
             colorScheme="orange"
@@ -55,7 +57,7 @@ export const CTA = () => {
             Our Portofolio
           </Button>
         </Link>
-      </Flex>
+      </Flex> */}
     </Flex>
   )
 }
