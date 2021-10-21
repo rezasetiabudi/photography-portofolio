@@ -34,12 +34,12 @@ export const AboutSection = ({companyProfile}) => {
         About Us
       </Heading>
       <Flex
-        flexDirection={{base:"column", md:"row"}}
+        flexDirection={{base:"column"}}
       >
         <Flex 
           flexDirection="column"
           pr={{md: 10}}
-          w={{base:"100%", md:"65%"}}
+          w={{base:"100%"}}
           alignSelf="center"
         >
           <Text mt={4} textAlign="justify">
@@ -53,11 +53,11 @@ export const AboutSection = ({companyProfile}) => {
         </Flex>
         <Img
           src="/assets/image/wsuff_logo.png"
-          objectFit={{base:"cover", md:"initial"}}
-          h={{base: "35vh", md:"fit-content"}}
+          objectFit="cover"
+          h={{base: "35vh"}}
           pt={{base: 5}}
-          w={{base:"100%", md:"35%"}}
-          alignSelf="start"
+          w={{base:"35vh"}}
+          alignSelf="center"
         />
       </Flex>
     </Flex>

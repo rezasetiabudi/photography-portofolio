@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Hero from '../components/Hero'
 import { AboutSection } from '../components/AboutSection'
-import { CTA } from '../components/CTA'
 
 import { 
 	Flex,
@@ -13,7 +12,6 @@ import {
 
 import {
 	Badge,
-	Avatar,
 	Spinner,
 } from '@chakra-ui/react'
 
@@ -57,7 +55,7 @@ const Index = (props) => {
 	
 	return (
 		<Flex
-			flexDir={{base:"column", md:"row"}}
+			flexDir={{base:"column"}}
 			// h={{base:"100vh"}}
 			w="full"
 		>
@@ -143,7 +141,6 @@ const Index = (props) => {
 															{tags}
 														</Badge>
 													))}
-													{/* <Text fontSize="sm" color="red">{post.slug}</Text> */}
 												</Box>
 											</Flex>
 										</Flex>
@@ -152,8 +149,8 @@ const Index = (props) => {
 					)})}
 				</Flex>
 			</Flex>
-      <Flex flexDir="column" p="2" bg="ivory" h="22vh" justifyContent="start">
-        <Text textAlign="center" fontSize="lg" fontWeight="bold" color="#f7941e" > What you waiting for, <br /> Contact now for best offer! </Text>
+      <Flex w="100%" flexDir="column" p="5" bg="ivory" h="22vh" justifyContent="start">
+        <Text textAlign="center" fontSize={{base:'lg',xsm:"2xl"}} fontWeight="bold" color="#f7941e" wrap> {data.campaign} </Text>
       </Flex>
       <StickyBottom />
 		</Flex>

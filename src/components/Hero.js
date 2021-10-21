@@ -17,7 +17,7 @@ const Hero = ({ title, desc }) => {
     <>
       <Flex
         w="full"
-        h={{base: "fit-content", md:"auto"}}
+        h={{base: "60vh"}}
         backgroundImage={{base: "assets/image/wsuff_hero_mobile.jpg" ,md:"/assets/image/wsuff_hero.jpg"}}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}

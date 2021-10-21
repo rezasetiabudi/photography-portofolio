@@ -13,7 +13,14 @@ export const StickyBottom = () => (
     w="100%" 
     zIndex={2} 
     bg="whiteAlpha.600"
+    justifyContent="center"
   >
-    <CTA />
+    <Flex 
+      w={{base:'100%', md:'70%', lg:'40%'}} 
+      // h={{lg: '5vh'}}
+      justifyContent="center"
+    >
+      <CTA />
+    </Flex>
   </Flex>
 ) 

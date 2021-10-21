@@ -19,7 +19,7 @@ export const CTA = () => {
       w='100%'
       flexWrap='wrap'
     >
-      <Flex py='2' pl={{base:0,xsmtsm:2}} w={{base:"100%", xsmtsm:"50%"}} onClick={e=>window.fbq('track', 'Lead')}>
+      <Flex py='2' w={{base:"100%"}} onClick={e=>window.fbq('track', 'Lead')}>
         <Link href="https://wa.me/6281214269124?text=Hello%20wsuff...">
           <Button 
             rightIcon={<ChatIcon />} 
