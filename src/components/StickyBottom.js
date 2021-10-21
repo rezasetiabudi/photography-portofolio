@@ -6,19 +6,19 @@ import {
 
 export const StickyBottom = () => (
   <Flex 
-    px="10" 
-    px="2" 
     position="fixed"
     bottom="0"
-    w="100%" 
+    w="inherit"
+    h='12vh'
     zIndex={2} 
     bg="whiteAlpha.600"
     justifyContent="center"
   >
     <Flex 
-      w={{base:'100%', md:'70%', lg:'40%'}} 
-      // h={{lg: '5vh'}}
+      w={{base:'100%', xsmtsm:'70%', lg:'40%'}} 
+      h='full'
       justifyContent="center"
+      flexDirection='column'
     >
       <CTA />
     </Flex>

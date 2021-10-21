@@ -18,13 +18,14 @@ export const AboutSection = ({companyProfile}) => {
   
   return(
     <Flex
-      maxWidth="full"
+      w="full"
       h={{base:"fit-content",lg:"fit-content"}}
       px={{base: 8, sm: 10, lg: 12, xl: 12}}
       py={{base: 10}}
-      justify={{base:"center"}}
+      justifyContent='center'
       direction="column"
       alignSelf="center"
+      // bg='red'
     >
       <Heading 
         pb={{base: 1, md: 0}}
@@ -54,9 +55,8 @@ export const AboutSection = ({companyProfile}) => {
         <Img
           src="/assets/image/wsuff_logo.png"
           objectFit="cover"
-          h={{base: "35vh"}}
+          boxSize='30vh'
           pt={{base: 5}}
-          w={{base:"35vh"}}
           alignSelf="center"
         />
       </Flex>
