@@ -1,18 +1,12 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Stack,
   Flex,
-  Button,
   Text,
   VStack,
-  useBreakpointValue,
   Heading,
 } from '@chakra-ui/react';
 
-import { DetermineSize } from '../helper/DetermineSize';
-
 const Hero = ({ title, desc }) => {
-  const size = DetermineSize()
   return(
     <>
       <Flex
