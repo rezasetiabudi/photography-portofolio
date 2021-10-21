@@ -8,7 +8,7 @@ import {
   useBreakpointValue,
   Heading,
 } from '@chakra-ui/react';
-import Link from 'next/link'
+
 import { DetermineSize } from '../helper/DetermineSize';
 
 const Hero = ({ title, desc }) => {
@@ -18,7 +18,7 @@ const Hero = ({ title, desc }) => {
       <Flex
         w="full"
         h={{base: "60vh"}}
-        backgroundImage={{base: "assets/image/wsuff_hero_mobile.jpg" ,md:"/assets/image/wsuff_hero.jpg"}}
+        backgroundImage={{base: `url("https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_70:420,w_1280/v1634803972/wsuff_hero_mobile_iiydec.jpg")` ,md: `url("https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_71:420,w_1280/v1634803964/wsuff_hero_dse7os.jpg")`}}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}
         >
