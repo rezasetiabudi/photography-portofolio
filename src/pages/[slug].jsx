@@ -76,7 +76,7 @@ export default ({ post, blocks }) => {
             alignSelf="center"
             overflowWrap="break-word" 
           >
-            <NotionRenderer blockMap={blocks} />
+            <NotionRenderer blockMap={blocks} fullPage />
           </Flex>
         </Flex>
       </Flex>
