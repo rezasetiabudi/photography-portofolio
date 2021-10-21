@@ -7,12 +7,7 @@ import {
   Heading,
   Text
 } from '@chakra-ui/layout'
-import { ChevronRightIcon } from '@chakra-ui/icons';
-
 import { Img } from "@chakra-ui/react"
-
-import { CTA } from './CTA'
-import BlogPage from '../pages/blog'
 
 export const AboutSection = ({companyProfile}) => {
   
@@ -25,7 +20,6 @@ export const AboutSection = ({companyProfile}) => {
       justifyContent='center'
       direction="column"
       alignSelf="center"
-      // bg='red'
     >
       <Heading 
         pb={{base: 1, md: 0}}

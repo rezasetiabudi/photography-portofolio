@@ -1,4 +1,4 @@
-import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 import '../styles.css'
@@ -26,13 +26,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <ColorModeProvider
-        options={{
-          useSystemColorMode: true,
-        }}
-      >
         <Component {...pageProps} />
-      </ColorModeProvider>
     </ChakraProvider>
   )
 }

@@ -12,6 +12,7 @@ import {
   ChevronRightIcon
 } from '@chakra-ui/icons'
 
+
 export const CTA = () => {
   return (
     <Flex

@@ -11,14 +11,16 @@ export const StickyBottom = () => (
     w="inherit"
     h='12vh'
     zIndex={2} 
-    bg="whiteAlpha.600"
     justifyContent="center"
   >
     <Flex 
-      w={{base:'100%', xsmtsm:'70%', lg:'40%'}} 
+      w={{base: '100%', sm: '70%',lg:'65%'}}
       h='full'
       justifyContent="center"
       flexDirection='column'
+      bg="whiteAlpha.100"
+      px='2vh'
+      rounded="5px"
     >
       <CTA />
     </Flex>

@@ -10,7 +10,7 @@ import {
   Center,
 } from "@chakra-ui/react"
 
-import { getAllPosts } from './blog'
+import { getAllPosts } from '../pages/index'
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
