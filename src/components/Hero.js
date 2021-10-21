@@ -18,7 +18,7 @@ const Hero = ({ title, desc }) => {
       <Flex
         w="full"
         h={{base: "60vh"}}
-        backgroundImage={{base: `url("https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_70:420,w_1280/v1634803972/wsuff_hero_mobile_iiydec.jpg")` ,md: `url("https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_71:420,w_1280/v1634803964/wsuff_hero_dse7os.jpg")`}}
+        backgroundImage={{base: `url(https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_70:420,w_1280/v1634803972/wsuff_hero_mobile_iiydec.jpg)` ,md: `url(https://res.cloudinary.com/whyrezan/image/upload/c_scale,q_71:420,w_1280/v1634803964/wsuff_hero_dse7os.jpg)`}}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}
         >
