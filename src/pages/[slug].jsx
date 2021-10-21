@@ -70,13 +70,14 @@ export default ({ post, blocks }) => {
           </Flex>
 
           <Flex
-            w={{base: "85%", xsm: "80%", xsmtsm: "80%", sm: "80%", md: "80%", lg: "85%", xl: "75%"}}
+            {/*w={{base: "85%", xsm: "80%", xsmtsm: "80%", sm: "80%", md: "80%", lg: "85%", xl: "75%"}}*/}
+            maxW="inherit"
             py={{base: 6, xsm: 8, xsmtsm: 10, sm: 14, md: 14, lg: 16, xl: 16  }}
             wrap="wrap"
             alignSelf="center"
             overflowWrap="break-word" 
           >
-            <NotionRenderer blockMap={blocks} fullPage />
+            <NotionRenderer blockMap={blocks} />
           </Flex>
         </Flex>
       </Flex>
