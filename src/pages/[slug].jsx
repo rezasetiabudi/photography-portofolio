@@ -2,6 +2,7 @@ import { NotionRenderer } from "react-notion";
 import { 
   Flex,
   Heading,
+  Box
 } from '@chakra-ui/layout'
 
 
@@ -43,8 +44,8 @@ export default ({ post, blocks }) => {
     >
       <Flex
         flexDir='column'
-        w={{base: '100%', sm: '70%',lg:'60%'}}
-      >
+        w={{base: "85%", xsm: "80%", xsmtsm: "80%", sm: "80%", md:"80%"}}
+        >
         <Flex
           w='full'
           minH="100vh"
@@ -63,21 +64,24 @@ export default ({ post, blocks }) => {
               textAlign="center"
               color="ivory"
               fontSize={{base: "sm", xsmtsm: "md", sm: "xl", md:"xl", lg: "2xl", xl: "3xl"}} 
-              py={{base: 4, xsm: 6, sm: 8}}
+              py={{base: 4, xsm: 6, sm: 8, md: 12}}
             >
               {post && post.title}
             </Heading>
           </Flex>
 
-          <Flex
-            w={{base: "85%", xsm: "80%", xsmtsm: "80%", sm: "80%", md: "80%", lg: "85%", xl: "75%"}}
-            py={{base: 6, xsm: 8, xsmtsm: 10, sm: 14, md: 14, lg: 16, xl: 16  }}
+          <Box
+            w="full"
+            py={{base: 6, xsm: 8, xsmtsm: 10, sm: 14, md: 14, lg: 16, xl: 16}}
+            px={0}
             wrap="wrap"
             alignSelf="center"
+            justifyContent="center"
             overflowWrap="break-word" 
+            overflow="auto"
           >
             <NotionRenderer blockMap={blocks} />
-          </Flex>
+          </Box>
         </Flex>
       </Flex>
     </Flex>

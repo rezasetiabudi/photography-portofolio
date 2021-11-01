@@ -89,7 +89,7 @@ export const PortofolioSection = ({posts}) => {
 							</Text>
 							<Flex>
 								<Box>
-								{post && post.category.map(tags => (
+								{post.category && post.category.map(tags => (
 									<Badge 
 									ml="1" 
 									variant="solid" 
