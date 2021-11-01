@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Link from 'next/link'
 
 import { 
   Flex,
+  Button,
   Heading,
   Text
 } from '@chakra-ui/layout'

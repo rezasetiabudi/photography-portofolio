@@ -8,6 +8,8 @@ import {
 
 import {
   ChatIcon,
+  EmailIcon,
+  ChevronRightIcon
 } from '@chakra-ui/icons'
 
 
